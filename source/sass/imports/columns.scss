@@ -1,0 +1,48 @@
+.row:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.grid [class^="col-"] {
+    padding: 10px;
+    background: #e4e5e7;
+    text-align: center;
+    color: #767779;
+}
+
+[class^="col-"] {
+    float: left;
+    margin-right: $grid-spacing;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[class^="col-"]:last-child {
+    margin-right: 0%;
+}
+
+.flex-height {
+	[class^="col-"] {
+	    display: flex;
+	    height: 100%;
+	}
+}
+
+
+.row {
+	&.fixed-height-row2 {
+		@include col-row-fixed-container-height(36,12,16,9,2,0.02);
+		
+		.cards {
+			height: 100%;
+		}
+		
+		@media (max-width: 820px) {
+			height: auto;
+		}
+	}
+	
+	
+}

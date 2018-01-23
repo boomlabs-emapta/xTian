@@ -1,0 +1,149 @@
+// COLOR VARIBLES
+$color-primary: #ed3a4b;
+$color-black: #000;
+$color-white: #fff;
+
+
+$color-grey-dark: #333;
+$color-grey-mid: #666;
+$color-grey-light: #ccc;
+
+$color-dark: #212427;
+
+
+// DEFAULT RATIO VARIBLES
+$img-ratio: 9 / 16;
+$ratio-16-9: 9 / 16;
+$ratio-4-3: 3 / 4;
+$ratio-1-1: 1;
+
+
+// MARGINS
+$base-margin: 48px;
+$base-margin-l: 48px;
+$base-margin-md: 36px;
+$base-margin-s: 24px;
+$base-margin-xs: 12px;
+
+// GRID GUTTER SIZES
+$gutter-xl: 48px;
+$gutter-l: 48px;
+$gutter-md: 36px;
+$gutter-s: 24px;
+$gutter-xs: 12px;
+
+// FEATURE VARIBLES
+
+$feature-img-width-desktop	: calc(#{70vw} - #{$base-margin});
+$feature-info-width-desktop	: calc(#{30vw} - #{$base-margin});
+$feature-height-desktop		: calc((9 / 16) * #{$feature-img-width-desktop});
+
+$feature-img-width-tablet	: calc(#{65vw} - #{$base-margin});
+$feature-info-width-tablet	: calc(#{35vw} - #{$base-margin});
+$feature-height-tablet		: calc(#{$img-ratio} * #{$feature-img-width-tablet});
+
+
+$feature-next-btn			: calc(#{$feature-info-width-desktop} + 10px);
+
+
+$feature-img-width-mobile: 100vw;
+$feature-info-width-mobile: 100vw;
+$feature-height-mobile: calc((9 / 16) * #{$feature-img-width-mobile});
+
+@mixin grid-col-width($cols, $margin) {
+	@if $margin > 0 {
+		width: calc((#{100vw} - (#{$margin} * 2)) / #{$cols});
+	} @else {
+		width: calc(#{100vw} / #{$cols});
+	}
+}
+
+@mixin grid-col-gutter-width($cols, $margin, $gutter:0) {
+	@if $margin > 0 {
+		@if $gutter > 0 && $cols > 1 {
+// 			width: calc((#{100vw} - (#{$margin} * 2) - (#{$gutter} * (#{$cols} - 1))) );
+			width: calc((#{100vw} - (#{$margin} * 2) - (#{$gutter} * (#{$cols} - 1))) / #{$cols});
+		} @else {
+			width: calc((#{100vw} - (#{$margin} * 2)) / #{$cols});
+		}
+	} @else {
+		@if $gutter > 0 && $cols > 1 {
+			width: calc((#{100vw} - (#{$gutter} * (#{col}-1))) / #{$cols});
+		} @else {
+			width: calc(#{100vw} / #{$cols});
+		}
+		
+	}
+}
+
+
+@mixin grid-col-height($img, $cols, $margin, $offset:0) {
+	
+	@if $offset > 0 {
+		@if $margin > 0 {
+			height: calc((#{$img} * (#{100vw} - (#{$margin} * 2)) / #{$cols}) + #{$offset});
+		} @else {
+			height: calc((#{$img} * (#{100vw} / #{$cols})) + #{$offset});
+		}
+	} @else {
+		
+		@if $margin > 0 {
+			height: calc(#{$img} * ((#{100vw} - (#{$margin} * 2)) / #{$cols}));
+		} @else {
+			height: calc(#{$img} * (#{100vw} / #{$cols}));
+		}
+	}		
+}
+
+@mixin grid-col-gutter-height($img, $cols, $margin:0, $gutter:0) {
+	
+	@if $margin > 0 {
+		@if $gutter > 0 && $cols > 1 {
+			height: calc(#{$img} * ((#{100vw} - (#{$margin} * 2) - (#{$gutter} * (#{$cols}-1))) / #{$cols}));
+		} @else {
+			height: calc(#{$img} * ((#{100vw} - (#{$margin} * 2)) / #{$cols}));
+		}	
+		
+	} @else {
+		height: calc(#{$img} * (#{100vw} / #{$cols}));
+	}	
+}
+
+@mixin grid-col($col, $sum, $gap: 1em, $align: top) {
+  width: 100%;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: if($first, 0, $gap);
+  padding-right: if($last, 0, $gap);
+
+  @media only screen and (min-width: 768px) {
+    width: percentage($col/$sum);
+    vertical-align: $align;
+  }
+}
+
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin linear-gradient($top-color, $bottom-color, $top-opacity, $bottom-opacity) {
+    background: -moz-linear-gradient(top, rgba($top-color, $top-opacity) 0%, rgba($bottom-color, $bottom-opacity) 60%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba($top-color, $top-opacity) 0%, rgba($bottom-color, $bottom-opacity) 60%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba($top-color, $top-opacity) 0%, rgba($bottom-color, $bottom-opacity) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str(rgba($top-color, $top-opacity))}', endColorstr='#{ie-hex-str(rgba($bottom-color, $bottom-opacity))}',GradientType=0 ); /* IE6-9 */
+}

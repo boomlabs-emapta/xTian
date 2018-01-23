@@ -1,0 +1,84 @@
+// COLOR VARIBLES
+$color-primary: #ed3a4b;
+$color-black: #000;
+$color-white: #fff;
+
+
+$color-grey-dark: #333;
+$color-grey-mid: #666;
+$color-grey-light: #ccc;
+
+$color-dark: #212427;
+
+
+$font-size: 12px;
+$line-height: 1.5;
+
+$feature-desc-lines-to-show: 12;
+
+
+// DEFAULT RATIO VARIBLES
+$img-ratio: 9 / 16;
+$ratio-16-9: 9 / 16;
+$ratio-4-3: 3 / 4;
+$ratio-1-1: 1;
+
+
+// MARGINS
+$base-margin: 48px;
+$base-margin-l: 48px;
+$base-margin-md: 36px;
+$base-margin-s: 24px;
+$base-margin-xs: 12px;
+
+// GRID GUTTER SIZES
+$gutter-xl: 48px;
+$gutter-l: 48px;
+$gutter-md: 36px;
+$gutter-s: 24px;
+$gutter-xs: 12px;
+
+
+$grid-spacing: 3%;
+$inner-spacing: 4px;
+$inner-padding: 4px;
+
+$page-margin: 3;
+$card-spacing: 3 / 100;
+
+$spacing-xs: 1%;
+$spacing-sm: 2%;
+$spacing-md: 3%;
+$spacing-lg: 4%;
+$spacing-xl: 5%;
+
+
+$card-slider-btn: 30px;
+$page-margin-offset : $page-margin * 2;
+$page-btn-offset : $card-slider-btn * 2;
+
+$vm: #{100vw};
+$vm-margin: #{100vw} - ((#{$page-margin-offset / 100}) * #{100vw});
+$vm-btn: #{100vw} - #{$page-btn-offset};
+$vm-margin-btn: #{100vw} - ((#{$page-margin-offset / 100}) * #{100vw}) - #{$page-btn-offset};
+
+
+// BREAK VARIABLES
+$breaks-xs: 480px;
+$breaks-sm: 640px;
+$breaks-md: 960px;
+$breaks-lg: 1200px;
+$breaks-xl: 1500px;
+
+$breaks: 	(#{$breaks-xl},#{$breaks-lg},#{$breaks-md},#{$breaks-sm},#{$breaks-xs});
+$break-7-1: (7,7,5,3,1);
+$break-6-2: (6,5,4,2,2);
+$break-5-2: (5,4,3,2,2);
+$break-5-1: (5,4,3,2,1);
+$break-4-2: (4,4,3,2,2);
+$break-4-1: (4,4,3,2,1);
+$break-3-1: (3,3,3,2,1);
+$break-3-2: (3,3,3,2,2);
+$break-3: 	(3,3,3,3,1);
+$break-2-1: (2,2,2,2,1);
+

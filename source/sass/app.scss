@@ -1,0 +1,156 @@
+@import 'imports/variables';
+@import 'imports/mixins';
+@import 'imports/swiper';
+@import 'imports/columns';
+@import 'imports/search';
+@import 'imports/header';
+@import 'imports/footer';
+@import 'imports/cards';
+@import 'imports/feature';
+@import 'imports/error';
+@import 'imports/layout';
+
+@import 'imports/fontawesome/font-awesome-light';
+@import 'imports/fontawesome/font-awesome-solid';
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+
+html,body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+html{
+	background: #000;
+}
+body{
+	background: #FFF;
+}
+
+
+a {
+	pointer-events: auto;
+	text-decoration: none;
+	color: $color-primary;
+	&:hover {
+		text-decoration: none;
+		color: darken($color-primary,10%);
+	}
+}
+
+h2 {
+	text-transform: uppercase;
+	color: $color-primary;
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.sans-serif {
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.serif {
+	font-family: 'PT+Serif', serif;
+}
+
+.color-primary {
+	color: $color-primary;
+}
+
+
+.grayscale {
+	-webkit-filter: grayscale(95%);
+	filter: grayscale(95%);
+}
+
+.no-filter {
+	-webkit-filter: none;
+	filter: none;
+}
+
+.container {
+	padding: $grid-spacing;
+}
+
+.container-0 {
+	padding: 0;
+}
+
+main {
+	position: relative;
+	min-height: 200px;
+	overflow: hidden;
+}
+
+.white-border-4 {
+	border: 4px solid $color-white;
+}
+
+.bg-grey {
+	background: $color-grey-light;
+}
+
+.bg-dark-grey {
+	background: $color-grey-dark;
+}
+
+.bg-white {
+	background: $color-white;
+}
+
+.bg-black {
+	background: $color-black;
+}
+
+.btn {
+	border: none;
+	padding: 8px 32px;
+    font-weight: 500;
+    color: $color-white;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 102%; 
+    @include linear-gradient(lighten($color-primary,10), darken($color-primary,10), 100, 100, 100%);
+    box-shadow: 0px 0px 20px rgba($color-black,0.5);
+    
+    &:hover {
+	    color: $color-white;
+	    @include linear-gradient(lighten($color-primary,5), darken($color-primary,20), 100, 100, 100%);
+    }
+}
+
+
+
+
+.img-hor {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+@include set-cols(12, $grid-spacing);
+@include set-cols(36, $grid-spacing);
+@include global_classes();

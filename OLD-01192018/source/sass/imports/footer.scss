@@ -1,0 +1,309 @@
+// CSS BASED ON SHEPPERTON SITE
+.footer {
+    background-color: $color-dark;
+    padding-top: 70px;
+    padding-bottom: 100px;
+    
+    color : $color-white;
+    
+    a {
+	    color: white;
+    }
+    
+    .footer__container {
+	    margin-right: $base-margin;
+	    margin-left: $base-margin;
+	    padding-left: 0;
+	    padding-right: 0;
+	    
+	    
+		&:before, &:after{
+			content: " ";
+			display: table;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		&:after{
+			clear: both;
+		}
+	    
+	    .footer__info {
+		    position: relative;
+		    min-height: 1px;
+		    padding-left: 0;
+		    padding-right: 0;
+		    position: relative;
+		    min-height: 1px;
+		    padding-left: 0;
+		    padding-right: 0;
+		    
+		    
+		    a, a:link, a:visited, a:active {
+			    color: $color-primary;
+			    transition: color .5s;
+			    text-decoration: none;
+			}
+
+			a:link, a:visited, a:active {
+			    text-decoration: none!important;
+			}
+			
+			.footer__logo {
+			    background-size: contain;
+			    height: 80px;
+			}
+			
+			.footer__logo {
+			    background-image: url(/includes/images/Shepparton-News.svg);
+			    background-repeat: no-repeat;
+			    background-position: 50%;
+			    background-size: 160px auto;
+			    display: block;
+			    height: 50px;
+			    margin-bottom: 20px;
+			    width: 160px;
+			}
+
+		    
+		    
+		    &:after {
+			    clear: both;
+		    }
+		}
+		
+		.footer__navigation {
+		    position: relative;
+		    min-height: 1px;
+		    padding-left: 0;
+		    padding-right: 0;
+		    position: relative;
+		    min-height: 1px;
+		    padding-left: 0;
+		    padding-right: 0;
+		    text-transform: uppercase;
+		    
+		  		    
+		    .footer__navigation--col-half {
+			    position: relative;
+			    min-height: 1px;
+			    padding-left: 0;
+			    padding-right: 0;
+			    
+			    ul {
+				    font-size: 14px;
+				    line-height: 22px;
+				    padding-left: 20px;
+				    margin: 0 0 30px;
+				    
+				    li {
+					    margin: 0;
+					    padding: 0;
+					    border: 0;
+					    font-size: 100%;
+					    font: inherit;
+					    vertical-align: baseline;
+					}
+				}
+				
+				.footer__navigation--col-1 {
+				    position: relative;
+				    min-height: 1px;
+				    padding-left: 0;
+				    padding-right: 0;
+				    position: relative;
+				    min-height: 1px;
+				    border-right: 2px #fff solid;
+				    padding-left: 0;
+				    padding-right: 0;
+				    list-style: none;
+				    margin: 0;
+				    padding: 0 30px;
+				}
+				
+				.footer__navigation--col-2 , .footer__navigation--col-3 {
+				    position: relative;
+				    min-height: 1px;
+				    padding-left: 0;
+				    padding-right: 0;
+				    position: relative;
+				    min-height: 1px;
+				    padding-left: 0;
+				    padding-right: 0;
+				    list-style: none;
+				    border-right: 2px #fff solid;
+				    padding: 0 30px;
+				}
+				
+				.footer__navigation--col-4 {
+				    position: relative;
+				    min-height: 1px;
+				    padding-left: 0;
+				    padding-right: 0;
+				    position: relative;
+				    min-height: 1px;
+				    padding-left: 0;
+				    padding-right: 0;
+				    list-style: none;
+				    padding: 0 30px;
+				}
+							
+				
+				.footer__navigation-link, .footer__navigation-link:link, .footer__navigation-link:visited, .footer__navigation-link:active {
+				    display: block;
+				    color: #fff;
+				    font-size: 13px;
+				    line-height: 30px;
+				}
+
+								
+				
+				
+				@media (min-width: 768px) {
+					.footer__navigation--col-1 {
+						float: left;
+						width: 100%;
+					}
+					
+					.footer__navigation--col-2 {
+					    float: left;
+					    width: 100%;
+					}
+					
+					.footer__navigation--col-3 {
+					    float: left;
+					    width: 100%;
+					}
+					
+					.footer__navigation--col-4 {
+					    float: left;
+					    width: 100%;
+					}
+				}
+			    
+			    
+			    @media (min-width: 1265px) {
+					.footer__navigation--col-1,.footer__navigation--col-2,.footer__navigation--col-3,.footer__navigation--col-4 {
+					    float: left;
+					    width: 34%;
+					}
+					
+					.footer__navigation--col-2{
+					    float: right;
+					}
+				}
+			}
+		}
+    }
+    
+    @media (min-width: 768px) {
+		.footer__navigation--col-half {
+			float: left;
+			width: 50%;
+		}
+	}
+    
+     
+    @media (min-width: 1265px) {
+	    .footer__container {
+			.footer__info {
+				float: left;
+				width: 33.33333%;
+			}
+			
+			.footer__navigation {
+			    float: left;
+			    width: 66.66667%;
+			    
+			}
+		}
+	}
+	
+    
+    
+	@media (max-width: 1265px) {
+		.footer__container {
+			.footer__info {
+				float: left;
+				width: 50%;
+			}
+			
+			.footer__navigation {
+			    float: left;
+			    width: 50%;
+			    
+			    .footer__navigation--col-half {
+				    float: left;
+				    width: 50%;
+				    
+				    .footer__navigation--col-1, .footer__navigation--col-2, .footer__navigation--col-3, .footer__navigation--col-4 {
+				    	border-right: none;
+				    	padding-left: 0;
+				    	padding-right: 0;
+				    }
+				    
+				    .footer__navigation--col-3 {
+					    border-bottom: 1px solid #fff;
+					    padding-bottom: 30px;
+						margin: 0 0 30px;
+				    }
+				}
+
+			}
+		}
+	}
+	
+	
+	
+	@media (max-width: 768px) {
+		
+		padding-top: 40px;
+		
+		.footer__container {
+			
+			margin-right: $base-margin-s;
+			margin-left: $base-margin-s;
+			
+			.footer__logo {
+			    background-size: 100px auto !important;
+			    width: 100px !important;
+			}
+			
+			.footer__info {
+				width: 100%;
+				padding-bottom: 20px;
+				
+			}
+			.footer__navigation {
+				 width: 100%;
+			    .footer__navigation--col-half {
+				    
+				    float: left;
+				    width: 50%;
+				    
+				    .footer__navigation--col-1, .footer__navigation--col-2, .footer__navigation--col-3, .footer__navigation--col-4 {
+				    	border-right: none;
+				    	padding-left: 0;
+				    	padding-right: 0;
+				    }
+				    
+				    .footer__navigation--col-3 {
+					    border-bottom: 1px solid #fff;
+					    padding-bottom: 30px;
+						margin: 0 0 30px;
+				    }
+				}
+
+			}
+		}
+	}
+	
+	
+	
+	@media (min-width: 1200px) {
+		.visible-lg {
+			display: block!important;
+		}
+	}
+}

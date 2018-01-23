@@ -1,0 +1,22 @@
+.vjs-big-play-button {
+    display: none;
+}
+.vjs-dock-text {
+	display: none !important;
+}
+.vjs-progress-control {
+	height: 1em !important;
+	top: -1em !important;
+}
+.vjs-mouse {
+	.vjs-progress-control {
+		height: 0.5em !important;
+		top: -.5em !important;
+		
+		&:hover {
+			height: 1.5em !important;
+			top: -1.5em!important;
+		}	
+	}
+
+}
